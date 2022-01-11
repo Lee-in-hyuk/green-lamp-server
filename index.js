@@ -133,7 +133,7 @@ app.post('/image',upload.single('image'),(req,res)=>{
 app.delete('/products/:id',async(req, res) => {
     const params = req.params;
     console.log('삭제삭제');
-    models.Product.destroy({ where: { id: params.id }})
+    models.Products.destroy({ where: { id: params.id }})
     .then( res.send(
         "상품이 삭제되었습니다."
     ))
